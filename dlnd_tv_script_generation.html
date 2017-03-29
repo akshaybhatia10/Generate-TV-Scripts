@@ -12105,7 +12105,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12166,7 +12166,7 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_inputs</span><span class="p">():</span>
@@ -12227,7 +12227,7 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_init_cell</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">):</span>
@@ -12282,7 +12282,7 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_embed</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">):</span>
@@ -12344,7 +12344,7 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_rnn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
@@ -12404,7 +12404,7 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_nn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">,</span> <span class="n">input_data</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">):</span>
@@ -12489,7 +12489,7 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_batches</span><span class="p">(</span><span class="n">int_text</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">seq_length</span><span class="p">):</span>
@@ -12501,7 +12501,7 @@ Default GPU Device: /gpu:0
 <span class="sd">    :return: Batches as a Numpy array</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     
-    <span class="n">n_batches</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">int_text</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">batch_size</span> <span class="o">*</span> <span class="n">seq_length</span><span class="p">))</span>
+    <span class="n">n_batches</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">int_text</span><span class="p">)</span> <span class="o">//</span> <span class="p">(</span><span class="n">batch_size</span> <span class="o">*</span> <span class="n">seq_length</span><span class="p">))</span>
 
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">int_text</span><span class="p">[:</span> <span class="n">n_batches</span> <span class="o">*</span> <span class="n">batch_size</span> <span class="o">*</span> <span class="n">seq_length</span><span class="p">])</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">int_text</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span> <span class="n">n_batches</span> <span class="o">*</span> <span class="n">batch_size</span> <span class="o">*</span> <span class="n">seq_length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
@@ -12558,17 +12558,17 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
-<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="c1"># Batch Size</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="c1"># RNN Size</span>
 <span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="c1"># Sequence Length</span>
-<span class="n">seq_length</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">seq_length</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="c1"># Learning Rate</span>
 <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>
 <span class="c1"># Show stats for every n number of batches</span>
@@ -12597,7 +12597,7 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12648,7 +12648,7 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12696,206 +12696,176 @@ Default GPU Device: /gpu:0
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch   0 Batch    0/2   train_loss = 8.821
-Epoch   5 Batch    0/2   train_loss = 5.992
-Epoch  10 Batch    0/2   train_loss = 5.915
-Epoch  15 Batch    0/2   train_loss = 5.876
-Epoch  20 Batch    0/2   train_loss = 5.870
-Epoch  25 Batch    0/2   train_loss = 5.864
-Epoch  30 Batch    0/2   train_loss = 5.860
-Epoch  35 Batch    0/2   train_loss = 5.866
-Epoch  40 Batch    0/2   train_loss = 5.858
-Epoch  45 Batch    0/2   train_loss = 5.859
-Epoch  50 Batch    0/2   train_loss = 5.857
-Epoch  55 Batch    0/2   train_loss = 5.856
-Epoch  60 Batch    0/2   train_loss = 5.860
-Epoch  65 Batch    0/2   train_loss = 5.833
-Epoch  70 Batch    0/2   train_loss = 5.721
-Epoch  75 Batch    0/2   train_loss = 5.619
-Epoch  80 Batch    0/2   train_loss = 5.545
-Epoch  85 Batch    0/2   train_loss = 5.485
-Epoch  90 Batch    0/2   train_loss = 5.434
-Epoch  95 Batch    0/2   train_loss = 5.371
-Epoch 100 Batch    0/2   train_loss = 5.287
-Epoch 105 Batch    0/2   train_loss = 5.086
-Epoch 110 Batch    0/2   train_loss = 4.898
-Epoch 115 Batch    0/2   train_loss = 4.722
-Epoch 120 Batch    0/2   train_loss = 4.518
-Epoch 125 Batch    0/2   train_loss = 4.346
-Epoch 130 Batch    0/2   train_loss = 4.198
-Epoch 135 Batch    0/2   train_loss = 4.072
-Epoch 140 Batch    0/2   train_loss = 3.910
-Epoch 145 Batch    0/2   train_loss = 3.795
-Epoch 150 Batch    0/2   train_loss = 3.635
-Epoch 155 Batch    0/2   train_loss = 3.490
-Epoch 160 Batch    0/2   train_loss = 3.398
-Epoch 165 Batch    0/2   train_loss = 3.275
-Epoch 170 Batch    0/2   train_loss = 3.135
-Epoch 175 Batch    0/2   train_loss = 3.037
-Epoch 180 Batch    0/2   train_loss = 2.977
-Epoch 185 Batch    0/2   train_loss = 2.825
-Epoch 190 Batch    0/2   train_loss = 2.707
-Epoch 195 Batch    0/2   train_loss = 2.644
-Epoch 200 Batch    0/2   train_loss = 2.569
-Epoch 205 Batch    0/2   train_loss = 2.437
-Epoch 210 Batch    0/2   train_loss = 2.330
-Epoch 215 Batch    0/2   train_loss = 2.274
-Epoch 220 Batch    0/2   train_loss = 2.200
-Epoch 225 Batch    0/2   train_loss = 2.083
-Epoch 230 Batch    0/2   train_loss = 2.020
-Epoch 235 Batch    0/2   train_loss = 1.998
-Epoch 240 Batch    0/2   train_loss = 1.879
-Epoch 245 Batch    0/2   train_loss = 1.840
-Epoch 250 Batch    0/2   train_loss = 1.744
-Epoch 255 Batch    0/2   train_loss = 1.671
-Epoch 260 Batch    0/2   train_loss = 1.612
-Epoch 265 Batch    0/2   train_loss = 1.544
-Epoch 270 Batch    0/2   train_loss = 1.496
-Epoch 275 Batch    0/2   train_loss = 1.453
-Epoch 280 Batch    0/2   train_loss = 1.383
-Epoch 285 Batch    0/2   train_loss = 1.313
-Epoch 290 Batch    0/2   train_loss = 1.279
-Epoch 295 Batch    0/2   train_loss = 1.242
-Epoch 300 Batch    0/2   train_loss = 1.195
-Epoch 305 Batch    0/2   train_loss = 1.123
-Epoch 310 Batch    0/2   train_loss = 1.063
-Epoch 315 Batch    0/2   train_loss = 1.204
-Epoch 320 Batch    0/2   train_loss = 1.039
-Epoch 325 Batch    0/2   train_loss = 0.953
-Epoch 330 Batch    0/2   train_loss = 0.893
-Epoch 335 Batch    0/2   train_loss = 0.918
-Epoch 340 Batch    0/2   train_loss = 0.834
-Epoch 345 Batch    0/2   train_loss = 0.788
-Epoch 350 Batch    0/2   train_loss = 0.780
-Epoch 355 Batch    0/2   train_loss = 0.784
-Epoch 360 Batch    0/2   train_loss = 0.703
-Epoch 365 Batch    0/2   train_loss = 0.654
-Epoch 370 Batch    0/2   train_loss = 0.679
-Epoch 375 Batch    0/2   train_loss = 0.615
-Epoch 380 Batch    0/2   train_loss = 0.575
-Epoch 385 Batch    0/2   train_loss = 0.549
-Epoch 390 Batch    0/2   train_loss = 0.557
-Epoch 395 Batch    0/2   train_loss = 0.523
-Epoch 400 Batch    0/2   train_loss = 0.480
-Epoch 405 Batch    0/2   train_loss = 0.446
-Epoch 410 Batch    0/2   train_loss = 0.444
-Epoch 415 Batch    0/2   train_loss = 0.452
-Epoch 420 Batch    0/2   train_loss = 0.421
-Epoch 425 Batch    0/2   train_loss = 0.391
-Epoch 430 Batch    0/2   train_loss = 0.357
-Epoch 435 Batch    0/2   train_loss = 0.335
-Epoch 440 Batch    0/2   train_loss = 0.318
-Epoch 445 Batch    0/2   train_loss = 0.315
-Epoch 450 Batch    0/2   train_loss = 0.303
-Epoch 455 Batch    0/2   train_loss = 0.399
-Epoch 460 Batch    0/2   train_loss = 0.357
-Epoch 465 Batch    0/2   train_loss = 0.303
-Epoch 470 Batch    0/2   train_loss = 0.265
-Epoch 475 Batch    0/2   train_loss = 0.242
-Epoch 480 Batch    0/2   train_loss = 0.225
-Epoch 485 Batch    0/2   train_loss = 0.212
-Epoch 490 Batch    0/2   train_loss = 0.201
-Epoch 495 Batch    0/2   train_loss = 0.191
-Epoch 500 Batch    0/2   train_loss = 0.188
-Epoch 505 Batch    0/2   train_loss = 0.180
-Epoch 510 Batch    0/2   train_loss = 0.167
-Epoch 515 Batch    0/2   train_loss = 0.158
-Epoch 520 Batch    0/2   train_loss = 0.151
-Epoch 525 Batch    0/2   train_loss = 0.144
-Epoch 530 Batch    0/2   train_loss = 0.139
-Epoch 535 Batch    0/2   train_loss = 0.134
-Epoch 540 Batch    0/2   train_loss = 0.128
-Epoch 545 Batch    0/2   train_loss = 0.121
-Epoch 550 Batch    0/2   train_loss = 0.114
-Epoch 555 Batch    0/2   train_loss = 0.109
-Epoch 560 Batch    0/2   train_loss = 0.104
-Epoch 565 Batch    0/2   train_loss = 0.100
-Epoch 570 Batch    0/2   train_loss = 0.098
-Epoch 575 Batch    0/2   train_loss = 0.094
-Epoch 580 Batch    0/2   train_loss = 0.090
-Epoch 585 Batch    0/2   train_loss = 0.086
-Epoch 590 Batch    0/2   train_loss = 0.082
-Epoch 595 Batch    0/2   train_loss = 0.078
-Epoch 600 Batch    0/2   train_loss = 0.075
-Epoch 605 Batch    0/2   train_loss = 0.072
-Epoch 610 Batch    0/2   train_loss = 0.070
-Epoch 615 Batch    0/2   train_loss = 0.067
-Epoch 620 Batch    0/2   train_loss = 0.064
-Epoch 625 Batch    0/2   train_loss = 0.062
-Epoch 630 Batch    0/2   train_loss = 0.060
-Epoch 635 Batch    0/2   train_loss = 0.058
-Epoch 640 Batch    0/2   train_loss = 0.057
-Epoch 645 Batch    0/2   train_loss = 0.055
-Epoch 650 Batch    0/2   train_loss = 0.053
-Epoch 655 Batch    0/2   train_loss = 0.051
-Epoch 660 Batch    0/2   train_loss = 0.050
-Epoch 665 Batch    0/2   train_loss = 0.048
-Epoch 670 Batch    0/2   train_loss = 0.048
-Epoch 675 Batch    0/2   train_loss = 0.046
-Epoch 680 Batch    0/2   train_loss = 0.044
-Epoch 685 Batch    0/2   train_loss = 0.043
-Epoch 690 Batch    0/2   train_loss = 0.042
-Epoch 695 Batch    0/2   train_loss = 0.041
-Epoch 700 Batch    0/2   train_loss = 0.040
-Epoch 705 Batch    0/2   train_loss = 0.039
-Epoch 710 Batch    0/2   train_loss = 0.038
-Epoch 715 Batch    0/2   train_loss = 0.037
-Epoch 720 Batch    0/2   train_loss = 0.037
-Epoch 725 Batch    0/2   train_loss = 0.042
-Epoch 730 Batch    0/2   train_loss = 5.372
-Epoch 735 Batch    0/2   train_loss = 3.030
-Epoch 740 Batch    0/2   train_loss = 1.800
-Epoch 745 Batch    0/2   train_loss = 1.254
-Epoch 750 Batch    0/2   train_loss = 1.020
-Epoch 755 Batch    0/2   train_loss = 0.822
-Epoch 760 Batch    0/2   train_loss = 0.695
-Epoch 765 Batch    0/2   train_loss = 0.606
-Epoch 770 Batch    0/2   train_loss = 0.571
-Epoch 775 Batch    0/2   train_loss = 0.536
-Epoch 780 Batch    0/2   train_loss = 0.474
-Epoch 785 Batch    0/2   train_loss = 0.419
-Epoch 790 Batch    0/2   train_loss = 0.381
-Epoch 795 Batch    0/2   train_loss = 0.353
-Epoch 800 Batch    0/2   train_loss = 0.347
-Epoch 805 Batch    0/2   train_loss = 0.318
-Epoch 810 Batch    0/2   train_loss = 0.290
-Epoch 815 Batch    0/2   train_loss = 0.269
-Epoch 820 Batch    0/2   train_loss = 0.250
-Epoch 825 Batch    0/2   train_loss = 0.236
-Epoch 830 Batch    0/2   train_loss = 0.231
-Epoch 835 Batch    0/2   train_loss = 0.217
-Epoch 840 Batch    0/2   train_loss = 0.201
-Epoch 845 Batch    0/2   train_loss = 0.189
-Epoch 850 Batch    0/2   train_loss = 0.177
-Epoch 855 Batch    0/2   train_loss = 0.171
-Epoch 860 Batch    0/2   train_loss = 0.163
-Epoch 865 Batch    0/2   train_loss = 0.154
-Epoch 870 Batch    0/2   train_loss = 0.145
-Epoch 875 Batch    0/2   train_loss = 0.138
-Epoch 880 Batch    0/2   train_loss = 0.130
-Epoch 885 Batch    0/2   train_loss = 0.124
-Epoch 890 Batch    0/2   train_loss = 0.117
-Epoch 895 Batch    0/2   train_loss = 0.111
-Epoch 900 Batch    0/2   train_loss = 0.106
-Epoch 905 Batch    0/2   train_loss = 0.102
-Epoch 910 Batch    0/2   train_loss = 0.098
-Epoch 915 Batch    0/2   train_loss = 0.093
-Epoch 920 Batch    0/2   train_loss = 0.089
-Epoch 925 Batch    0/2   train_loss = 0.085
-Epoch 930 Batch    0/2   train_loss = 0.081
-Epoch 935 Batch    0/2   train_loss = 0.078
-Epoch 940 Batch    0/2   train_loss = 0.075
-Epoch 945 Batch    0/2   train_loss = 0.072
-Epoch 950 Batch    0/2   train_loss = 0.070
-Epoch 955 Batch    0/2   train_loss = 0.067
-Epoch 960 Batch    0/2   train_loss = 0.065
-Epoch 965 Batch    0/2   train_loss = 0.063
-Epoch 970 Batch    0/2   train_loss = 0.061
-Epoch 975 Batch    0/2   train_loss = 0.059
-Epoch 980 Batch    0/2   train_loss = 0.057
-Epoch 985 Batch    0/2   train_loss = 0.056
-Epoch 990 Batch    0/2   train_loss = 0.054
-Epoch 995 Batch    0/2   train_loss = 0.052
+<pre>Epoch   0 Batch    0/17   train_loss = 8.821
+Epoch   0 Batch   10/17   train_loss = 6.699
+Epoch   1 Batch    3/17   train_loss = 6.338
+Epoch   1 Batch   13/17   train_loss = 6.150
+Epoch   2 Batch    6/17   train_loss = 6.236
+Epoch   2 Batch   16/17   train_loss = 6.121
+Epoch   3 Batch    9/17   train_loss = 6.086
+Epoch   4 Batch    2/17   train_loss = 5.988
+Epoch   4 Batch   12/17   train_loss = 5.911
+Epoch   5 Batch    5/17   train_loss = 5.849
+Epoch   5 Batch   15/17   train_loss = 5.777
+Epoch   6 Batch    8/17   train_loss = 5.698
+Epoch   7 Batch    1/17   train_loss = 5.620
+Epoch   7 Batch   11/17   train_loss = 5.595
+Epoch   8 Batch    4/17   train_loss = 5.572
+Epoch   8 Batch   14/17   train_loss = 5.418
+Epoch   9 Batch    7/17   train_loss = 5.273
+Epoch  10 Batch    0/17   train_loss = 5.137
+Epoch  10 Batch   10/17   train_loss = 4.916
+Epoch  11 Batch    3/17   train_loss = 4.898
+Epoch  11 Batch   13/17   train_loss = 4.693
+Epoch  12 Batch    6/17   train_loss = 4.600
+Epoch  12 Batch   16/17   train_loss = 4.500
+Epoch  13 Batch    9/17   train_loss = 4.410
+Epoch  14 Batch    2/17   train_loss = 4.340
+Epoch  14 Batch   12/17   train_loss = 4.186
+Epoch  15 Batch    5/17   train_loss = 4.171
+Epoch  15 Batch   15/17   train_loss = 4.074
+Epoch  16 Batch    8/17   train_loss = 4.018
+Epoch  17 Batch    1/17   train_loss = 4.008
+Epoch  17 Batch   11/17   train_loss = 3.788
+Epoch  18 Batch    4/17   train_loss = 3.899
+Epoch  18 Batch   14/17   train_loss = 3.733
+Epoch  19 Batch    7/17   train_loss = 3.738
+Epoch  20 Batch    0/17   train_loss = 3.697
+Epoch  20 Batch   10/17   train_loss = 3.627
+Epoch  21 Batch    3/17   train_loss = 3.630
+Epoch  21 Batch   13/17   train_loss = 3.460
+Epoch  22 Batch    6/17   train_loss = 3.421
+Epoch  22 Batch   16/17   train_loss = 3.362
+Epoch  23 Batch    9/17   train_loss = 3.254
+Epoch  24 Batch    2/17   train_loss = 3.241
+Epoch  24 Batch   12/17   train_loss = 3.093
+Epoch  25 Batch    5/17   train_loss = 3.061
+Epoch  25 Batch   15/17   train_loss = 2.998
+Epoch  26 Batch    8/17   train_loss = 2.998
+Epoch  27 Batch    1/17   train_loss = 3.019
+Epoch  27 Batch   11/17   train_loss = 2.770
+Epoch  28 Batch    4/17   train_loss = 2.884
+Epoch  28 Batch   14/17   train_loss = 2.769
+Epoch  29 Batch    7/17   train_loss = 2.772
+Epoch  30 Batch    0/17   train_loss = 2.674
+Epoch  30 Batch   10/17   train_loss = 2.612
+Epoch  31 Batch    3/17   train_loss = 2.644
+Epoch  31 Batch   13/17   train_loss = 2.447
+Epoch  32 Batch    6/17   train_loss = 2.489
+Epoch  32 Batch   16/17   train_loss = 2.398
+Epoch  33 Batch    9/17   train_loss = 2.321
+Epoch  34 Batch    2/17   train_loss = 2.341
+Epoch  34 Batch   12/17   train_loss = 2.208
+Epoch  35 Batch    5/17   train_loss = 2.186
+Epoch  35 Batch   15/17   train_loss = 2.217
+Epoch  36 Batch    8/17   train_loss = 2.217
+Epoch  37 Batch    1/17   train_loss = 2.241
+Epoch  37 Batch   11/17   train_loss = 2.022
+Epoch  38 Batch    4/17   train_loss = 2.107
+Epoch  38 Batch   14/17   train_loss = 2.065
+Epoch  39 Batch    7/17   train_loss = 2.035
+Epoch  40 Batch    0/17   train_loss = 2.001
+Epoch  40 Batch   10/17   train_loss = 2.009
+Epoch  41 Batch    3/17   train_loss = 2.041
+Epoch  41 Batch   13/17   train_loss = 1.980
+Epoch  42 Batch    6/17   train_loss = 2.063
+Epoch  42 Batch   16/17   train_loss = 2.082
+Epoch  43 Batch    9/17   train_loss = 1.955
+Epoch  44 Batch    2/17   train_loss = 2.011
+Epoch  44 Batch   12/17   train_loss = 1.893
+Epoch  45 Batch    5/17   train_loss = 1.836
+Epoch  45 Batch   15/17   train_loss = 1.850
+Epoch  46 Batch    8/17   train_loss = 1.808
+Epoch  47 Batch    1/17   train_loss = 1.804
+Epoch  47 Batch   11/17   train_loss = 1.538
+Epoch  48 Batch    4/17   train_loss = 1.611
+Epoch  48 Batch   14/17   train_loss = 1.558
+Epoch  49 Batch    7/17   train_loss = 1.485
+Epoch  50 Batch    0/17   train_loss = 1.430
+Epoch  50 Batch   10/17   train_loss = 1.393
+Epoch  51 Batch    3/17   train_loss = 1.368
+Epoch  51 Batch   13/17   train_loss = 1.269
+Epoch  52 Batch    6/17   train_loss = 1.365
+Epoch  52 Batch   16/17   train_loss = 1.323
+Epoch  53 Batch    9/17   train_loss = 1.281
+Epoch  54 Batch    2/17   train_loss = 1.291
+Epoch  54 Batch   12/17   train_loss = 1.243
+Epoch  55 Batch    5/17   train_loss = 1.162
+Epoch  55 Batch   15/17   train_loss = 1.232
+Epoch  56 Batch    8/17   train_loss = 1.204
+Epoch  57 Batch    1/17   train_loss = 1.272
+Epoch  57 Batch   11/17   train_loss = 1.117
+Epoch  58 Batch    4/17   train_loss = 1.198
+Epoch  58 Batch   14/17   train_loss = 1.236
+Epoch  59 Batch    7/17   train_loss = 1.169
+Epoch  60 Batch    0/17   train_loss = 1.152
+Epoch  60 Batch   10/17   train_loss = 1.139
+Epoch  61 Batch    3/17   train_loss = 1.113
+Epoch  61 Batch   13/17   train_loss = 1.044
+Epoch  62 Batch    6/17   train_loss = 1.062
+Epoch  62 Batch   16/17   train_loss = 1.041
+Epoch  63 Batch    9/17   train_loss = 0.947
+Epoch  64 Batch    2/17   train_loss = 1.019
+Epoch  64 Batch   12/17   train_loss = 0.982
+Epoch  65 Batch    5/17   train_loss = 0.918
+Epoch  65 Batch   15/17   train_loss = 0.967
+Epoch  66 Batch    8/17   train_loss = 0.945
+Epoch  67 Batch    1/17   train_loss = 1.023
+Epoch  67 Batch   11/17   train_loss = 0.851
+Epoch  68 Batch    4/17   train_loss = 0.903
+Epoch  68 Batch   14/17   train_loss = 0.897
+Epoch  69 Batch    7/17   train_loss = 0.841
+Epoch  70 Batch    0/17   train_loss = 0.799
+Epoch  70 Batch   10/17   train_loss = 0.791
+Epoch  71 Batch    3/17   train_loss = 0.730
+Epoch  71 Batch   13/17   train_loss = 0.691
+Epoch  72 Batch    6/17   train_loss = 0.746
+Epoch  72 Batch   16/17   train_loss = 0.684
+Epoch  73 Batch    9/17   train_loss = 0.639
+Epoch  74 Batch    2/17   train_loss = 0.666
+Epoch  74 Batch   12/17   train_loss = 0.699
+Epoch  75 Batch    5/17   train_loss = 0.582
+Epoch  75 Batch   15/17   train_loss = 0.666
+Epoch  76 Batch    8/17   train_loss = 0.625
+Epoch  77 Batch    1/17   train_loss = 0.696
+Epoch  77 Batch   11/17   train_loss = 0.598
+Epoch  78 Batch    4/17   train_loss = 0.618
+Epoch  78 Batch   14/17   train_loss = 0.663
+Epoch  79 Batch    7/17   train_loss = 0.588
+Epoch  80 Batch    0/17   train_loss = 0.570
+Epoch  80 Batch   10/17   train_loss = 0.591
+Epoch  81 Batch    3/17   train_loss = 0.552
+Epoch  81 Batch   13/17   train_loss = 0.538
+Epoch  82 Batch    6/17   train_loss = 0.597
+Epoch  82 Batch   16/17   train_loss = 0.564
+Epoch  83 Batch    9/17   train_loss = 0.522
+Epoch  84 Batch    2/17   train_loss = 0.538
+Epoch  84 Batch   12/17   train_loss = 0.566
+Epoch  85 Batch    5/17   train_loss = 0.470
+Epoch  85 Batch   15/17   train_loss = 0.525
+Epoch  86 Batch    8/17   train_loss = 0.488
+Epoch  87 Batch    1/17   train_loss = 0.573
+Epoch  87 Batch   11/17   train_loss = 0.501
+Epoch  88 Batch    4/17   train_loss = 0.509
+Epoch  88 Batch   14/17   train_loss = 0.551
+Epoch  89 Batch    7/17   train_loss = 0.466
+Epoch  90 Batch    0/17   train_loss = 0.467
+Epoch  90 Batch   10/17   train_loss = 0.467
+Epoch  91 Batch    3/17   train_loss = 0.426
+Epoch  91 Batch   13/17   train_loss = 0.416
+Epoch  92 Batch    6/17   train_loss = 0.443
+Epoch  92 Batch   16/17   train_loss = 0.440
+Epoch  93 Batch    9/17   train_loss = 0.403
+Epoch  94 Batch    2/17   train_loss = 0.418
+Epoch  94 Batch   12/17   train_loss = 0.455
+Epoch  95 Batch    5/17   train_loss = 0.379
+Epoch  95 Batch   15/17   train_loss = 0.439
+Epoch  96 Batch    8/17   train_loss = 0.416
+Epoch  97 Batch    1/17   train_loss = 0.504
+Epoch  97 Batch   11/17   train_loss = 0.419
+Epoch  98 Batch    4/17   train_loss = 0.452
+Epoch  98 Batch   14/17   train_loss = 0.459
+Epoch  99 Batch    7/17   train_loss = 0.408
 Model Trained and Saved
 </pre>
 </div>
@@ -12917,7 +12887,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12943,7 +12913,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12982,7 +12952,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_tensors</span><span class="p">(</span><span class="n">loaded_graph</span><span class="p">):</span>
@@ -13038,7 +13008,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">):</span>
@@ -13090,10 +13060,10 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gen_length</span> <span class="o">=</span> <span class="mi">2000</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gen_length</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="c1"># homer_simpson, moe_szyslak, or Barney_Gumble</span>
 <span class="n">prime_word</span> <span class="o">=</span> <span class="s1">&#39;moe_szyslak&#39;</span>
 
@@ -13151,141 +13121,55 @@ Model Trained and Saved
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>moe_szyslak:(into phone) moe&#39;s tavern. where the elite meet to drink.
-bart_simpson: eh, yeah, hello, is mike there? last name, rotch.
-moe_szyslak:(into phone) hold on, i&#39;ll check.(to barflies) mike rotch. mike rotch. hey, has anybody seen mike rotch, lately?
-moe_szyslak:(into phone) listen you little puke. one of these days i&#39;m gonna catch you, and i&#39;m gonna carve my name on your back with an ice pick.
-moe_szyslak: what&#39;s the ticket i like it.
-homer_simpson: me too?
-moe_szyslak: but what this is much much much much much much much to(raises glass in front of mouth) moe&#39;s i need to hear it.
-carl_carlson:(shrugs) hey, moe. i need a name that&#39;s right, moe.
-moe_szyslak: not you!
-homer_simpson:(incredulous) moe? it&#39;s i! / oh i&#39;m, i&#39;m going to guys.
-football_announcer: at me! i could forget my car is bring that back, moe.
-moe_szyslak:(to bears) someone&#39;s win to do up, or even believe that, and you&#39;ll just get drunk coming.
-moe_szyslak: ah, the thesaurus... when i wrote something more and dance up.
-homer_simpson: that was the best damn barney you was and dead. and is it? think, i&#39;ll give me a sixty percent for a vestigial tail will homer&#39;s not sober.
-barney_gumble:(singing) the thing much duff in the bar with a treat yellow lights. wait, homer. what have goin&#39; with a heavyweight left to krusty) five days. uh, as what that wouldn&#39;t that gonna use your ivy-covered christmas i get your buttocks? we can combine the dna of work / he wouldn&#39;t turn back.
-moe_szyslak: hey, this was back before with that old man.
-sadistic_barfly: now i was me. i&#39;m wasting the bar.
-lenny_leonard: he never stops punching...&#34;
-doug: aw, dad.(takes off hardhat)
-homer_simpson:(grunt) calf&#39;s in the bucks. sir, homer. go on, krusty. / goodbye i&#39;ll give like&#34; kid in the son too. that&#39;s as famous as five the bartender something-- and this isn&#39;t that old bucks about a&#34; gosh, can i come out of make hope they give him a good better!
-moe_szyslak: get his keys!
-homer_simpson:(drunk,&#34; i&#39;m self of fights this bar) to you, bad.(swooning) the b....
-barney_gumble: hey, this is a crowbar!
-moe_szyslak: hey, homer, you&#39;re the greatest.
-moe_szyslak: that&#39;s right? but i gotta have something.
-kirk_van_houten: oh. you&#39;re surprised! look, the fans are weary of the house scout meeting.
-barney_gumble: is it?
-
-
-homer_simpson:(tipsy) you-need-man.. so, ah, i&#39;m not lookin&#39; to date.
-carl_carlson: right there!(shoots guns, friendly) well, homer. i&#39;ve been polite open? i can&#39;t admit for a shot of me.
-moe_szyslak: yeah, all right, it&#39;s, you&#39;d be disappointed in the championship.
-moe_szyslak:(to little man)&#34; dear(. and he&#39;s... a&#34; thorough inspection.&#34; m ago i&#39;m the water fountain.
-homer_simpson:(singing) the one getting the house.
-homer_simpson: oh, marge will be with him.
-marge_simpson: okay. you&#39;re always moe.
-barney_gumble: eh, ah, hey, get him!
-moe_szyslak: and i wanna wipe out, i it. i have back beer or give him some other kid!
-moe_szyslak: okay, my measurements?
-bret: well, me too.
-homer_simpson: i wanna have no advice from an encore?. then it&#39;s a time machine.
-lenny_leonard: i did.
-homer_simpson: how do you think i felt? i&#39;m talkin&#39; about a lotta talkin&#39; for a boat.
-lenny_leonard: oh, c&#39;mon. i think you&#39;re supposed to be the big company. i mean.
-
-
-homer_simpson:(to barney) this isn&#39;t no more.
-barney_gumble: sure! if i like you sing right?!! uh my name sure.
-moe_szyslak:(shakes head murmur) i won&#39;t find like you.
-homer_simpson:(big exhale)
-moe_szyslak: so, it was... you&#39;re finally dea-d-d-dead.(whip crack) canyonero.
-homer_simpson:(extremely one) i&#39;ll give homer a beer!
-homer_simpson:(drunk) that&#39;s a parasol.
-homer_simpson: pfft! / yeah!
-moe_szyslak:(&#34; moe with me. but i have no collateral, why don&#39;t you go.! nooo! that it.
-
-
-homer_simpson:(laughs) aw, i&#39;m sorry. i want to give a speech.
-stillwater: sorry, homer?
-homer_simpson:(gets an idea) actually homer.
-
-
-homer_simpson: moe, sorry.
-billy_the_kid: you!.. so wishes were fix... what would you as did you get money... here comes the darts... woo as you look good on the outside, but you still love me.
-homer_simpson:(still getting a sea are.
-moe_szyslak: you gotta do it was it.
-barney_gumble: aw, that&#39;s what chapter uncle! they&#39;re gonna get change!
-homer_simpson:(drunk) oh, just a good laugh, as is it, moe.
-moe_szyslak:(to ralph) phone? it&#39;s never. they got directions! i carl_carlson: you guys for you!
-moe_szyslak:(into phone) ah, hey, i&#39;m not a time machine. when i say his good series. and what?
-homer_simpson: you know, i already something to be a c. o nice in) someone&#39;s win to so something no more...
-homer_simpson:(explaining)&#34; sure.(gasp)
-the graveyard and say is stupid bad!
-moe_szyslak: oh yeah? your greatest feat of my house here.
-
-
-moe_szyslak: wha?!
-carl_carlson: hey, well... homer, thanks, moe.
-
-
-moe_szyslak:(watching book) from the love on years.
-moe_szyslak: oh, ridin&#39; the midnight beer. but moe, this license-- and this is a hundred and city all happened.(quickly) help me, homer. you can be spending my best damn who things the party boat has won my fastest to yellow pennies in a rough pipe.
-lenny_leonard: now everybody, as that!
-moe_szyslak:(quickly) oh,(tipsy) canyonero, marge...&#34;
-homer_simpson:(moans) i do it! fact go with the man who is that you want to focus for the game! from you, well. and you know we&#39;re right to you to go up.
-moe_szyslak:&#34; are you?
-moe_szyslak: hey, what&#39;s this?
-moe_szyslak: what&#39;s the word shall homer_simpson: no, that&#39;s one.
-homer_simpson: who&#39;s smithers, some first enabling.
-lenny_leonard: if i find this way is machine.
-moe_szyslak:(&#34;) dad!&#34; absolutely and my poor bar.
-kent_brockman: or wishes.
-homer_simpson:(distraught) hey, there was a c. to drink. you do i look like, kid. if i&#39;m gonna hand my money!
-moe_szyslak:(quietly) no more?
-barney_gumble: hey, hey, homer. wanna start with us.
-lenny_leonard: hey, homer, it&#39;s my friend...(bitter) but i haven&#39;t seen a little bit, krusty!
-homer_simpson: i shoulda camera) moe, this is a crowbar!
-moe_szyslak: hey, moe, you&#39;re the greatest.
-barney_gumble: man, not just doin&#39; about a duff, of &#39;em.
-professor_jonathan_frink: say, but i&#39;m not okay. no kids.
-krusty_the_clown:(enthusiastically) hey, hey, don&#39;t just the crank kid? moe. it was... give me fifty bucks!
-homer_simpson:(looks) i got all the kids.
-moe_szyslak:(clears throat) it is the woman-- can i eat them without you.&#34; it&#39;s great. to no turned us some. i know homer, but where who was a big girl has a game! homer, i gotta see! i swear!
-homer_simpson: well, chug-monkeys. what kind of fights this. give it to help you,
-homer_simpson:(grunt) he might have us.
-homer_simpson: no, it&#39;s not my blood. / hello?
-homer_simpson: oh, come on, but there&#39;s the soul of a beat) i&#39;ll respect.
-bart_simpson: uh-oh. my only friend no one hurts.
-
-
-moe_szyslak: ah, it&#39;s a second! oh, it&#39;s all free. maybe i did.
-homer_simpson:(? and get out) your voice to alter this place with it!
-moe_szyslak: homer, let me look at me? i&#39;m attracted to another woman. what ya the woman.
-carl_carlson: come on, guys. but all right. this bashir kid is you.
-
-
-homer_simpson:(leans back, looks, hello?
-lenny_leonard: yeah, get outta here-- all right, moe... the last drink... moe? / yeah!
-homer_simpson: homer, marge... homer is, marge. absolutely no, if you still want to go.
-homer_simpson:(still reasonable) the thing is-- oof! ow!
-homer_simpson:(talk-sings) i stopped my crying / one of his kidneys.
-moe_szyslak: hey, what do you really have to drink that?
-lenny_leonard: devastated. what do we call to give some brandy around. / yeah.&#34; lisa&#39;s tavern. homer.
-
-
-lenny_leonard: hey, c&#39;mon...&#34;
-homer_simpson:(shaking head) lenny, you do why it was worth that.
-
-
-moe_szyslak: what&#39;s my next time long thing.
-barney_gumble: but i understand. uh my god, not-- but, but not gorgeous. and this, i see a fictional tv getting innocent) love by appealing to a beer!.. that&#39;s, moe, marge.
-homer_simpson: it was gorgeous, moe. you came from my back fat!
-homer_simpson: boy, think you know i say.
-moe_szyslak: ah, yeah, all right, you&#39;re supposed to stand) whatcha was with his time are one drunk and we&#39;ll breakin&#39; it to get all.
-barney_gumble: hey, hey, i&#39;m gonna manage your boxing career, i guess i got a lot
+<pre>moe_szyslak:(into phone) gotcha ya down for forty bucks. good luck your eminence, huh? / your sister once they could knew where the day i&#39;ll go with the energy!
+moe_szyslak: uh, who cares? i want to use the back with?
+moe_szyslak: i don&#39;t get that straight.
+homer_simpson: no. i was afraid in this way to make you for the game in things.
+homer_simpson: what is the letter in excellent.(proudly) santeria, i can&#39;t believe i didn&#39;t be the only way is gonna do / the best thing.
+homer_simpson: oh, oh, i don&#39;t get what? i thought you were gettin&#39; the greatest to taking drunk on the table.
+quimby_#2: with your majority crayola oblongata.
+moe_szyslak: well, i got the steam engine.
+homer_simpson:(gasps) i have the bill machine.(offended) his middle... the man has money with my car,(taps young weekly clown!
+moe_szyslak: yeah. but the only guy i won&#39;t have to drink.
+chief_wiggum:(serious) hey, we all know, i want you to meet the last eighty-seven / from all.
+homer_simpson:(small frustrated noise) what do you call?
+moe_szyslak: i got the kind of moe?&#34; now a cop been a channel six news bulletin.
+moe_szyslak: homer, he&#39;s how too nice! i smell the guns for they be nine o&#39;clock.
+homer_simpson:(quietly) homer, you&#39;re sweet. but yeah. i want you to know that... uh, i love your dad. you can make this... i am.
+homer_simpson:(loud) if i didn&#39;t say you&#39;d kill it.
+moe_szyslak: yeah, i love you, moe? he was a firm about human nature by our bill card&#34; smells your way!
+homer_simpson: you will be&#34; too day.&#34;
+homer_simpson: i see / that&#39;s it. i mean the be sharps.&#34; i&#39;d say my money with the hospital.
+moe_szyslak: the moron next in the car.
+moe_szyslak: well, i ain&#39;t never believe what i blame me? this is the charming tavern you&#39;ve got back into the bar.(laughs) oh, it&#39;s all relative.
+homer_simpson: i hit my head for&#34; the truck for here.
+homer_simpson: oh, what the hell who is some serious drinkin&#39; in i&#39;ve money with the town!
+carl_carlson:(slow deeply) i know, i just wanna get five. / can i make it through the three musketeers?
+moe_szyslak: yeah. / mmmm, moe. you&#39;re the party where you remember what i make if you don&#39;t do with the fridge room&#34; your time he don&#39;t wanna know you?
+moe_szyslak: yeah, i just wanna try your family?
+lenny_leonard: say there&#39;s the man who filed the world while i survive the world won&#39;t turn great won&#39;t found a hang of two hilarious.
+homer_simpson:(small frustrated noise)
+moe_szyslak: well, i won&#39;t say or kill?
+homer_simpson:(shrieks) i dunno, moe? i just whisper it. that&#39;s a free beer.(meaningfully) of course... who proves uh, you asked for the health department. i have some problem? the uh, you&#39;re a great man, a guy smells too life. and you drink to drink&#34; you&#39;re a smoker taking that?
+moe_szyslak: well, i guess i should just be eatin&#39; sure i wanted the person just he wouldn&#39;t be way. then now the good friend!
+moe_szyslak: well, i guess i should be honest with the attitude, made it all the way, i was pretty&#34; i want you do still make each daddy!
+homer_simpson:(to moe, then) uh, i don&#39;t do it. i walked again!
+homer_simpson: i hope you call me! get out of your face?
+moe_szyslak: hey, homer. i was just quick down? i don&#39;t know...(belches)
+dr. c&#39;mon! ooh! before you&#39;re not here. i broke the wrong guy.
+homer_simpson:(warily) i did something we can drink again!
+moe_szyslak: tax hike, homer? you&#39;re the greatest.
+lisa_simpson: i already have to foil an assassination, or you get all the truth who don&#39;t been big big date.
+homer_simpson: oh, i need cash, it&#39;s your last face was closed now.(slight sobs)
+homer_simpson: yeah. what have you badmouth, she check. and i&#39;m gonna be nine.
+larry: hey, this is serious. the kids ain&#39;t edna!
+homer_simpson: oh, you were just gonna get right in the game. i don&#39;t know anything was a day i remember something why... apulina.
+moe_szyslak: yeah, it&#39;s just the wrong thing.
+homer_simpson: i could know you out your alley.
+homer_simpson: say... those no boxer, he wishes.
+homer_simpson:(good natured) uh, the only way to do a very thoughtless wakede i&#39;ve the correct tester!
+lenny_leonard: oh yeah. how have you a right to date.
+homer_simpson:(still cool, desperate) her uh, moe, i know. i want you to meet my new special lady. say you ain&#39;t welcome
 </pre>
 </div>
 </div>
